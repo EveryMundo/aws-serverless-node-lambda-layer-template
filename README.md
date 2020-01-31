@@ -13,5 +13,15 @@ clone your repo to your local environment
 example:
 ```sh
 ./initialize-layer.sh node-testing-layer mocha chai sinon nyc
-sls deploy --account [012345678900]
+```
+
+Once initialized, because the serverless.yml file comes with no account information, you can deploy it right away by passing the account as a parameter
+```sh
+sls deploy --account 012345678900
+```
+But you can also edit the file and set your account number to it
+
+The default region in the file is **us-west-2** but if you want to deploy it to another region you can pass it as a parameter as well
+```sh
+sls deploy --account 012345678900 --region us-east-1
 ```
