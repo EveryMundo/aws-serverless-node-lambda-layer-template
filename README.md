@@ -10,6 +10,10 @@ clone your repo to your local environment
 ```sh
 ./initialize-layer.sh node-NAME-layer [npm-module1 npm-module2 ... npm-moduleN]
 ```
+or if your repo has the name of the layer
+```sh
+./initialize-layer.sh $(basename $PWD) [npm-module1 npm-module2 ... npm-moduleN]
+```
 example:
 ```sh
 ./initialize-layer.sh node-testing-layer mocha chai sinon nyc
