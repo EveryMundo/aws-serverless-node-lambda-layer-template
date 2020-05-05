@@ -29,3 +29,14 @@ The default region in the file is **us-west-2** but if you want to deploy it to 
 ```sh
 sls deploy --account 012345678900 --region us-east-1
 ```
+
+
+# How to use the published layers within your serverless project
+On your serverless.yml file you just add the layers to the ```/functions?/``` using the cloud formation reference like this:
+
+```yml
+functions:
+  yourFunc:
+    layers:
+      - ${cf:node-YOUR-LAYER-NAME-layer.latestVersionARN}
+```
