@@ -5,12 +5,15 @@ service: node-yourServiceName-layer
 # plugins:
 #   - some-plugin
 
+custom:
+  aws:
+    account: ${opt:account, env:AWS_ACCOUNT, '000000000000'}
+
 provider:
   name: aws
   stage: ${opt:stage, 'layer'}
   region: ${opt:region, 'us-west-2'}
-  account: ${opt:account, '000000000000'}
-  deploymentBucket: em-serverless-apps-${self:provider.region}-${self:provider.account}
+  deploymentBucket: em-serverless-apps-${self:provider.region}-${self:custom.aws.account}
 
 package:
   exclude:
