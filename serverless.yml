@@ -33,7 +33,7 @@ layers:
   lib:
     path: '' # required, path to layer contents on disk
     name: ${self:service}-${self:provider.stage} # Deployed Lambda layer name
-    description: ${file(./layer-description.js):description}
+    description: ${file(./layer-description.js)}
     compatibleRuntimes: # optional, a list of runtimes this layer is compatible with
       - nodejs12.x
       - nodejs14.x

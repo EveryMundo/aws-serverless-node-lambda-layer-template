@@ -1,15 +1,16 @@
 const path = require('path')
 
-module.exports = function () {
+function getDependenciesString () {
   try {
-    return {
-      description: Object
-        .entries(require(path.join(__dirname, 'nodejs/package.json')).dependencies)
-        .map(([k, v]) => `${k}@${v}`).join('\n')
-    }
+    return JSON.stringify(require(path.join(__dirname, 'nodejs', 'package.json')).dependencies)
   } catch (e) {
-    console.error('DESCRIPTION ERROR:\n', e.message, '\n')
+    const errorMessage = `DESCRIPTION ERROR: ${e.message}`
+    console.error(errorMessage, '\n')
 
-    return { description: '' }
+    return errorMessage.replace(/'/g, '').split('\n').join(' ++ ')
   }
+}
+
+module.exports = function () {
+  return ('' + getDependenciesString()).substr(0, 256)
 }
