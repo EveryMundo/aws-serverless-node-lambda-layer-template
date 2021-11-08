@@ -2,7 +2,7 @@
 Template Project to help you creating your node lambda Layer using serverless framework
 
 # Create your repo
-1. Create your own repo by clicking on [use this template] button
+1. Create your own repo by clicking on the [[use this template](https://github.com/EveryMundo/aws-serverless-node-lambda-layer-template/generate)] button on the home of this repo 
 2. Name your repo as node-NAME-layer
 3. clone your repo to your local environment
 
@@ -42,5 +42,5 @@ On your serverless.yml file you just add the layers to the ```/functions?/``` us
 functions:
   yourFunc:
     layers:
-      - ${cf:node-YOUR-LAYER-NAME-layer.latestVersionARN}
+      - ${cf:node-YOUR-LAYER-NAME-layer.LibLambdaLayerQualifiedArn}
 ```
