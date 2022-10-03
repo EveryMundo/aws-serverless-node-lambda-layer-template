@@ -15,6 +15,7 @@ custom:
 
 provider:
   name: aws
+  deploymentMethod: direct
   stage: ${opt:stage, 'layer'}
   region: ${opt:region, 'us-west-2'}
   deploymentBucket:
