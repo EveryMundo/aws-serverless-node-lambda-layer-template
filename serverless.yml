@@ -22,11 +22,33 @@ provider:
 
 package:
   patterns:
-    # exclude
+  # exclude:
+    - '!*'
     - '!temp/**'
     - '!node_modules/**'
+    - '!*.sh'
+    - '!*.map'
     - '!*.json'
-    # include:
+    - '!nodejs/*'
+    - '!nodejs/node_modules/.bin/**'
+    - '!nodejs/node_modules/**/README.md'
+    - '!nodejs/node_modules/**/readme.md'
+    - '!nodejs/node_modules/**/Readme.md'
+    - '!nodejs/node_modules/**/CHANGELOG.md'
+    - '!nodejs/node_modules/**/LICENSE'
+    - '!nodejs/node_modules/**/LICENSE.md'
+    - '!nodejs/node_modules/**/.travis.yml'
+    - '!nodejs/node_modules/**/.github/*'
+    - '!nodejs/node_modules/**/.editorconfig'
+    - '!nodejs/node_modules/**/.npmignore'
+    - '!nodejs/node_modules/**/*.swp'
+    - '!nodejs/node_modules/**/.eslint*'
+    - '!nodejs/node_modules/**/docs/**'
+    - '!nodejs/node_modules/**/example/**'
+    - '!nodejs/node_modules/**/test/**'
+    - '!nodejs/node_modules/**/temp/**'
+    - '!nodejs/node_modules/**/tmp/**'
+  # include:
     - nodejs/node_modules
 
 layers:
