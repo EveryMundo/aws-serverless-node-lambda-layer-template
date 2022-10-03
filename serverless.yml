@@ -58,7 +58,7 @@ layers:
     name: ${self:service}-${self:provider.stage} # Deployed Lambda layer name
     description: ${file(./layer-description.js)}
     compatibleRuntimes: # optional, a list of runtimes this layer is compatible with
-      - nodejs12.x
+      - nodejs16.x
       - nodejs14.x
     allowedAccounts: # optional, a list of AWS account IDs allowed to access this layer.
       - '*'
