@@ -1,7 +1,7 @@
 # Please keep the node- prefix as it is part of our naming convention
 service: node-yourServiceName-layer
 
-frameworkVersion: ">=2.39.0 <4.0.0"
+frameworkVersion: ">=3.15.0 <4.0.0"
 variablesResolutionMode: 20210326
 # variablesResolutionMode: 20210219
 configValidationMode: error
